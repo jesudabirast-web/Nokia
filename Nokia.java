@@ -11,20 +11,20 @@ Scanner input = new Scanner(System.in);
 
 System.out.println("""Welcome to Nokia
 
-List of menu functions;
-1.phone book;
-2.messages;
-3.chat;
-4.call Register;
-5.tones;
-6.settings;
-7.call Divert;
-8.games; 
-9.calculator;
-10.reminders;
-11.clock;
-12.profiles;
-13.SIM services;
+List of menu functions
+1.phone book
+2.messages
+3.chat
+4.call Register
+5.tones
+6.settings
+7.call Divert
+8.games
+9.calculator
+10.reminders
+11.clock
+12.profiles
+13.SIM services
 
 Choose an option from the 13 above""");
 
@@ -50,23 +50,24 @@ System.out.println("menu");
 System.out.print("Enter an option: ");
 int menu = input.nextInt();
 
-switch (menu){
+switch (menu) {
 case 1 -> {System.out.println("Type of view);}
 case 2 -> {System.out.println("Memory status");}
 case 3 -> {System.out.println("Choose an option");}
+case 4 -> {System.out.println("Back to main menu");}
 }
 
 }
 
 case 9 -> {System.out.println("Speed dials");}
 case 10 -> {System.out.println("Voice tags");}
-default -> {System.out.println("Choose an option");}
+case 11 -> {System.out.println("Choose an option");}
+default -> {System.out.println("Back to main menu");}
 
 }
 
 
-case 2 -> {
-menu = """
+case 2 -> {System.out.print("""
 --------------Messages--------------
 1.write messages
 2.inbox
@@ -130,6 +131,9 @@ case 1 -> {System.out.println("Message centre number");}
 case 2 -> {System.out.println("Message sent as");}
 case 3 -> {System.out.println("Message validity");}
 case 4 -> {System.out.println("Choose an option");}
+case 5 -> {System.out.println("Back to Message settings");}
+case 6 -> {System.out.println("Back to Messages menu");}
+case 7 -> {System.out.println("Back to main menu");}
 }
 
 }
@@ -153,23 +157,30 @@ case 1 -> {System.out.println("Delivery reports");}
 case 2 -> {System.out.println("Reply via same centres");}
 case 3 -> {System.out.println("Character support");}
 case 4 -> {System.out.println("Choose an option");}
+case 5 -> {System.out.println("Back to Message settings");}
+case 6 -> {System.out.println("Back to Messages menu");}
+case 7 -> {System.out.println("Back to main menu");}
 
 }
 
-}
-
-case 4 -> {System.out.println("Choose an option");}
 }
 
 case 8 -> {System.out.println("Info service");}
 case 9 -> {System.out.println("Voice mailbox number");}
 case 10 -> {System.out.println("servie command editor");}
 case 4 -> {System.out.println("Choose an option");}
+case 5 -> {System.out.println("Back to Message settings");}
+case 6 -> {System.out.println("Back to Messages menu");}
+case 7 -> {System.out.println("Back to main menu");}
 }
 
 }
 
 case 3 -> {System.out.println("Chat");}
+case 4 -> {System.out.println("Back to main menu");
+}
+
+
 case 4 -> {
 menu = """
 ----------------Call register--------------
@@ -218,6 +229,8 @@ case 3 -> {System.out.println("Recived calls' duration");}
 case 4 -> {System.out.println("Dialled calls' duration");}
 case 5 -> {System.out.println("Clear timers");}
 case 6 -> {System.out.println("Choose an option: ");}
+case 7 -> {System.out.println("Back to Call register menu");}
+case 8 -> {System.out.println("Back to main menu");}
 }
 
 }
@@ -242,6 +255,8 @@ case 1 -> {System.out.println("Last call cost");}
 case 2 -> {System.out.println("All calls' cost");}
 case 3 -> {System.out.println("Clear counters");}
 case 4 -> {System.out.println("Choose an option");}
+case 5 -> {System.out.println("Back to Call register menu");}
+case 6 -> {System.out.println("Back to main menu");}
 }
 }
 
@@ -262,10 +277,12 @@ switch(menu) {
 case 1 -> {System.out.println("Call cost limit");}
 case 2 -> {System.out.println("Show costs in");}
 case 3 -> {System.out.println("Choose an option");}
+case 4 -> {System.out.println("Back to Call register menu");}
 }
 
 }
 case 8 -> {System.out.println("Prepaid credit");}
+case 9 -> {System.out.println("Back to Call register menu");}
 }
 
 }
@@ -302,6 +319,7 @@ case 7 -> {System.out.println("Warning and games tones");}
 case 8 -> {System.out.println("Vibrating alert");}
 case 9 -> {System.out.println("Screen saver");}
 case 10 -> {System.out.println("Choose an option: ");}
+case 11 -> {System.out.println("Back to main menu");}
 }
 
 }
@@ -347,6 +365,8 @@ case 4 -> {System.out.println("own number sending");}
 case 5 -> {System.out.println("phone line in use");}
 case 6 -> {System.out.println("automatic answer");}
 case 7 -> {System.out.println("Choose an option: ");}
+case 8 -> {System.out.println("Back to Settings menu");}
+case 9 -> {System.out.println("Back to main menu");}
 }
 
 }
@@ -377,6 +397,9 @@ case 4 -> {System.out.println("network selection");}
 case 5 -> {System.out.println("lights");}
 case 6 -> {System.out.println("confirm SIM service actions");}
 case 7 -> {System.out.println("Choose an option: ");}
+case 8 -> {System.out.println("Back to Settings menu");}
+case 9 -> {System.out.println("Back to main menu");}
+
 }
 }
 
@@ -388,30 +411,47 @@ system.out.print("""Security settings
 5.phone security
 6.change access codes
 """);
+case 2 -> {System.out.println("Back to Settings menu");}
+case 3 -> {System.out.println("Back to main menu");}
+}
+
 
 case 4 -> System.out.print("""Restore factory settings""");
+case 5 -> {System.out.println("Back to Settings menu");}
+case 6 -> {System.out.println("Back to main menu");}
+}
+
 }
 
 }
 
 case 7 -> System.out.print("call divert");
+case 1 -> {System.out.println("Back to main menu");
+}
+
 case 8 -> System.out.print("Games");
-case9 -> System.out.print("Calculator");
+case 1 -> {System.out.println("Back to main menu");
+}
+
+case 9 -> System.out.print("Calculator");
+case 1 -> {System.out.println("Back to main menu");
+}
+
 case 10 -> System.out.print("Reminders");
+case 1 -> {System.out.println("Back to main menu");
+}
+
 case 11 -> {
 
-menu = """
----------------Clock---------------
+System.out.print("""Clock
 1.alarm clock
 2.clock settings
 3.date settings
 4.stopwatch
 5.countdown timer 
 6.auto update of date and time
---------------------------------------
-""";
+""");
 
-System.out.println("menu");
 System.out.print("Enter an option: ");
 int menu = input.nextInt();
 
@@ -425,12 +465,21 @@ case 4 -> {System.out.println("stopwatch");}
 case 5 -> {System.out.println("coutdown timer");}
 case 6 -> {System.out.println("auto update of date and time");}
 case 7 -> {System.out.println("Choose an option: ");}
+case 8 -> {System.out.println("Back to Clock menu");}
+case 9 -> {System.out.println("Back to main menu");}
 }
 
 }
 
 case 12 -> {System.out.println("Profiles");}
+case 1 -> {System.out.println("Back to main menu");
+}
+
 case 13 -> {System.out.println("SIM services");}
+case 1 -> {System.out.println("Back to main menu");
+}
+
+}
 
 
 
